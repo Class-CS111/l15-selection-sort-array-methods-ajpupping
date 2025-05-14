@@ -11,9 +11,23 @@ public class Main
   {
     int[] values = {12, 16, 26, 42, 53, 77, 84};
     
-    System.out.print("TEST: array contents = " + 
+    System.out.println("TEST: array contents = " + 
+      ArrayMethods.arrayString(values));
+
+      ArrayMethods.swap(values, 0, 6);
+
+      System.out.println("TEST: array after swap of 12 and 84 = " +
       ArrayMethods.arrayString(values));
     
+
+      ArrayMethods.indexOfMin(values, 0);
+
+      int[] numbers = {42, 16, 84, 12, 77, 26, 53};
+      int minIndex1 = ArrayMethods.indexOfMin(numbers, 0);
+      int minIndex2 = ArrayMethods.indexOfMin(numbers, 4);
+
+      System.out.println(" TEST: min indices should be 3 and 5, we got: " +
+       minIndex1 + " and " + minIndex2);
 
   }
 }

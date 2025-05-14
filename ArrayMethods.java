@@ -12,7 +12,10 @@
 *	Collection of useful methods for int arrays.
 *********************************************
 *	ALGORITHM:
-*	TODO: <Pseudocode for selection sort here>
+*	Loop through the array and print each element to string
+* Swap two elements within the array
+* Find the minimum element in the array
+* Reverse the order of the elements in the array
 *********************************************
 
 /* UML CLASS DIAGRAM:
@@ -30,7 +33,7 @@ ArrayMethods
 
 public class ArrayMethods
 {
-  /**DESCRIPTION: */
+  /**DESCRIPTION: print the array */
   public static String arrayString(int[] a)
   {
     String result = "{ " + a[0];
@@ -43,16 +46,28 @@ public class ArrayMethods
     return result;
   }
   
-  /**DESCRIPTION: */
+  /**DESCRIPTION: swap two values */
   public static void swap(int[] array, int a, int b)
   {
+    int temp = array[a];
+    array[a] = array[b];
+    array[b] = temp;
   
   }
 	
 	/**DESCRIPTION: */
   public static int indexOfMin(int[] array, int startIndex)
   {
-    return 0; //STUB to keep compiler happy
+    int minValue = array[startIndex];
+    int minIndex = startIndex;
+
+    for(int i = startIndex+1; i < array.length; i++) {
+      if(minValue > array[i]) {
+        minValue = array[i];
+        minIndex = i;
+      }
+    }
+    return minIndex;
   }
 
 	/**DESCRIPTION: */
