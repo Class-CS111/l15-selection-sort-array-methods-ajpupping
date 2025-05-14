@@ -29,5 +29,23 @@ public class Main
       System.out.println(" TEST: min indices should be 3 and 5, we got: " +
        minIndex1 + " and " + minIndex2);
 
+
+      System.out.println("TEST: array before reversal = " + 
+      ArrayMethods.arrayString(numbers));
+
+      ArrayMethods.reverse(numbers);
+
+      System.out.println("TEST: array after reversal = " + 
+      ArrayMethods.arrayString(numbers));
+
+      System.out.println("TEST: array before sorting " + 
+      ArrayMethods.arrayString(numbers));
+
+      ArrayMethods.selectionSort(numbers);
+        
+      System.out.println("TEST: array after sorting = " + 
+      ArrayMethods.arrayString(numbers));
+
+
   }
 }

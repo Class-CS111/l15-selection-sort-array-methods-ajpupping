@@ -55,7 +55,7 @@ public class ArrayMethods
   
   }
 	
-	/**DESCRIPTION: */
+	/**DESCRIPTION: find the index of the minimum value */
   public static int indexOfMin(int[] array, int startIndex)
   {
     int minValue = array[startIndex];
@@ -70,15 +70,22 @@ public class ArrayMethods
     return minIndex;
   }
 
-	/**DESCRIPTION: */
+	/**DESCRIPTION: reverse the order of the array */
   public static void reverse(int[] array)
   {
+    for(int i = 0; i < array.length/2; i++) {
+      ArrayMethods.swap(array, i, array.length-1-i);
+    }
 
   }
 
-	/**DESCRIPTION: */
+	/**DESCRIPTION: sorts the array in order from least to greatest*/
   public static void selectionSort(int[] array)
   {
+    for(int i = 0; i < array.length-1; i++) {
+      int indexMinValue = ArrayMethods.indexOfMin(array, i);
+      ArrayMethods.swap(array, i, indexMinValue);
+    }
 
   }
 
