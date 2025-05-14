@@ -1,8 +1,8 @@
 /********************************************
-*	AUTHOR:	<name>
-* COLLABORATORS: <names>
+*	AUTHOR:	Alyssa Pupping
+* COLLABORATORS: N/A
 *	COURSE:	CS 111 Intro to CS I - Java
-*	LAST MODIFIED: <date>
+*	LAST MODIFIED: 5/13/25
 ********************************************/
 
 /********************************************
@@ -33,7 +33,14 @@ public class ArrayMethods
   /**DESCRIPTION: */
   public static String arrayString(int[] a)
   {
-    return ""; //STUB to keep compiler happy
+    String result = "{ " + a[0];
+    // concatenate on each int value
+    for(int i = 1; i < a.length; i++) {
+      result +=  ", " + a[i];
+    }
+    result += " }";
+
+    return result;
   }
   
   /**DESCRIPTION: */
